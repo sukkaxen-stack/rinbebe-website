@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Love</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Intro Music -->
+    <audio id="introMusic" loop>
+        <source src="images/intro.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Intro/Surprise Screen -->
+    <div class="intro-screen" id="introScreen">
+        <div class="intro-content">
+            <div class="hearts-container">
+                <span class="floating-heart">💕</span>
+                <span class="floating-heart">💗</span>
+                <span class="floating-heart">💖</span>
+                <span class="floating-heart">💝</span>
+                <span class="floating-heart">💕</span>
+            </div>
+            <h1 class="intro-title">Hey bebe...</h1>
+            <p class="intro-message">I made something special for you</p>
+            <button class="intro-button" onclick="enterSite()">
+                <span class="button-text">Open Your Surprise</span>
+                <span class="button-hearts">💝</span>
+            </button>
+            <p class="intro-hint">tap to continue</p>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="brand">FROM Kiyozen</div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Navigation -->
+        <header class="header">
+            <h1 class="logo">FOR LOVE</h1>
+            <p class="section-subtitle">For love, with love.</p>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#affirmations">Read Me</a>
+                <a href="#music">Music</a>
+                <a href="#bykiyozen">By kiyozen.</a>
+            </nav>
+        </header>
+
+        <!-- Home Section -->
+        <section id="home" class="section home-section">
+            <h2 class="section-title">A LITTLE CORNER OF THE INTERNET, EXCLUSIVELY FOR YOU, MY BEBE.</h2>
+            <p class="section-subtitle">here i compiled all my favorite pictures of you and us, love notes, and a song.</p>
+        </section>
+
+        <!-- Gallery Slideshow Section -->
+        <section class="section gallery-section">
+            <div class="slideshow-container">
+                <!-- Slides -->
+                <div class="slide fade">
+                    <img src="images/gallery1.jpg" alt="Gallery 1" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1000&h=500&fit=crop'">
+                </div>
+                <div class="slide fade">
+                    <img src="images/gallery2.jpg" alt="Gallery 2" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1000&h=500&fit=crop'">
+                </div>
+                <div class="slide fade">
+                    <img src="images/gallery3.jpg" alt="Gallery 3" onerror="this.src='https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=1000&h=500&fit=crop'">
+                </div>
+                <div class="slide fade">
+                    <img src="images/gallery4.jpg" alt="Gallery 4" onerror="this.src='https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1000&h=500&fit=crop'">
+                </div>
+                <div class="slide fade">
+                    <img src="images/gallery5.jpg" alt="Gallery 5" onerror="this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?w=1000&h=500&fit=crop'">
+                </div>
+                
+                <!-- Navigation arrows -->
+
+            </div>
+            
+            <!-- Dots indicator -->
+            <div class="slideshow-dots">
+                <span class="dot" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+                <span class="dot" onclick="goToSlide(3)"></span>
+                <span class="dot" onclick="goToSlide(4)"></span>
+            </div>
+            
+            
+        </section>
+
+        <!-- Parallax Section 1 -->
+        <div class="parallax-section parallax-1">
+            <div class="parallax-content">
+                <span class="parallax-emoji">💕</span>
+                <p class="parallax-quote">"I'm sorry bebe,Mag bati na us"</p>
+            </div>
+        </div>
+
+        <!-- Daily Affirmations Section -->
+        <section id="affirmations" class="section affirmations-section">
+            <h2 class="section-title">Read Me 💌</h2>
+            <p class="section-subtitle">A special message just for you</p>
+            
+            <div class="affirmation-card">
+                <div class="affirmation-icon">💝</div>
+                <p class="affirmation-text" id="affirmationText">Loading...</p>
+                <button class="affirmation-btn" onclick="showNewAffirmation()">
+                    <span>✨ Click me</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Photo Mosaic Section -->
+        <section class="section mosaic-section">
+
+            <p class="section-subtitle">Hover over to reveal the magic</p>
+            
+            <div class="mosaic-container">
+                <div class="mosaic-grid">
+                    <div class="mosaic-item" style="--delay: 0s">
+                        <img src="images/memory1.jpg" alt="Memory 1" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop'">
+                    </div>
+                    <div class="mosaic-item" style="--delay: 0.1s">
+                        <img src="images/memory2.jpg" alt="Memory 2" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop'">
+                    </div>
+                    <div class="mosaic-item" style="--delay: 0.2s">
+                        <img src="images/memory3.jpg" alt="Memory 3" onerror="this.src='https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300&h=300&fit=crop'">
+                    </div>
+                    <div class="mosaic-item" style="--delay: 0.3s">
+                        <img src="images/memory4.jpg" alt="Memory 4" onerror="this.src='https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300&h=300&fit=crop'">
+                    </div>
+                    <div class="mosaic-item" style="--delay: 0.4s">
+                        <img src="images/memory5.jpg" alt="Memory 5" onerror="this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&h=300&fit=crop'">
+                    </div>
+                    <div class="mosaic-item" style="--delay: 0.5s">
+                        <img src="images/memory6.jpg" alt="Memory 6" onerror="this.src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop'">
+
+                </div>
+                <div class="mosaic-message">
+                    <span class="heart-big">💖</span>
+                    <p>I love you, bebe.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Music Section -->
+        <section id="music" class="section music-section">
+            <h2 class="section-title">Music</h2>
+            <p class="section-subtitle">This song reminds me of you.</p>
+            
+            <div class="spotify-player">
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6wrotxeOoTKTADWIr9GXB7?utm_source=generator&si=53fdddc5bc094854" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3EriD11HEMpLt5q8QO2tQZ?utm_source=generator&si=b9647920736744ac" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3JkDuxcnIzBUngCk6peKZi?utm_source=generator&si=fb704fabcfd04be4" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>  </div>
+        </section>
+
+        <!-- By Kiyozen Section -->
+        <section id="bykiyozen" class="section bykiyozen-section">
+            <h2 class="section-title">By Kiyozen.</h2>
+            <p class="section-subtitle">Im sorry na my bebe</p>
+            
+            <div class="letter-video">
+                <div class="letter-paper">
+                    <h3 class="letter-heading">Loving you</h3>
+                    <p class="letter-text">
+                        
+                        I love you in ways that stretch beyond language, beyond time, beyond what can be easily explained. These words may seem simple, but they carry the depth of everything my heart has learned to hold. Loving you has never been loud or demanding. It has been steady, patient, and quietly certain. I'm doing all of this because i love you. Actually no, love is an understatement. It seemed overused, trivial, and simplistic while my emotions for you were extraordinary, complex, and expansive as the universe itself. That is how i feel about you.<br><br>
+                        I also want to make things right between us and ease the tension that happened. I'm genuinely sorry for the things i said and for the way i handled the situation. Looking back, i realize that i could have been more patient and understanding instead of letting my emotions get the better of me. I know all you needed from me was to wait, and i wish i had understood that better in the moment. The truth is, i was already making this website for you. I had been putting my feelings into something i wanted you to see, something that could express the things i sometimes struggle to say out loud. I was also hesitant to give you some of my other handcrafts because i felt embarrassed about them. I kept thinking that maybe they looked like nothing special, or that my efforts weren't good enough. But despite those doubts, every little thing i made was still made with you in mind. I never wanted my insecurities or the way i handled things to overshadow the love and thoughtfulness behind them. I'm sorry that it turned into something that hurt us instead of something that could have made you happy.<br><br>
+                        Sometimes, i wish you could see how much i was genuinely trying, even in the moments when it didn't seem enough. I know there were times when you expected more from me, and i understand that wanting more from someone you love isn't necessarily wrong. But i hope you also understand that i was doing my part in this relationship in the best way i knew how. Every time, i tried to give what i could, even when i didn't always know how to express it properly. It hurts a little knowing that despite all the effort i was putting in, there were still moments when it felt like i wasn't doing enough. Not because i didn't want to give you more, but because i was already giving you the best of what i had at that time. I wish you could see that my efforts were never meant to be the bare minimum. They were genuine, and they came from someone who truly wanted to make things work with you. And if there were things i lacked or ways i could have loved you better, i hope you know that it was never because i didn't care. I was still learning, still trying, and still choosing to show up for us in the ways i could.<br><br>
+                        No matter where life leads us, a part of me will always choose you — in growth, in distance, in the moments that require faith more than certainty, and if there ever comes a time when words fall short, know that my prayers will continue where my voice cannot. In every tomorrow, in every version of what comes next, my heart remember you with the same sincerity it holds today.
+                    </p>
+                </div>
+            </div>
+
+            <div class="author-section">
+                <div class="author-image">
+                    <img src="images/author.jpg" alt="Author" onerror="this.src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop'">
+                </div>
+                <h3 class="author-name">Kiyozen</h3>
+                <p class="author-subtitle">ur lover</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
